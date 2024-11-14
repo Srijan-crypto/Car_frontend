@@ -21,7 +21,7 @@ const CarForm = () => {
   const [imagePreview, setImagePreview] = useState([]); // For previewing selected images
   const [error, setError] = useState(null);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
-  const API_URL = 'http://localhost:5000/api'; 
+  const API_URL = 'https://car-backend-4py7.onrender.com/api';
   useEffect(() => {
     if (isEditMode) {
       // Fetch existing car details to populate the form
@@ -212,7 +212,7 @@ const CarForm = () => {
           {isEditMode &&
             existingImages.map((url, index) => (
               <div key={`existing-${index}`} className="image-preview">
-                <img src={`http://localhost:5000/uploads/${url}`} alt={`Car ${index}`} />
+                <img src={`https://car-backend-4py7.onrender.com/uploads/${url}`} alt={`Car ${index}`} />
                 <button type="button" onClick={() => handleRemoveImage(index, true)}>
                   Remove
                 </button>
