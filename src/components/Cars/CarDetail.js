@@ -10,7 +10,7 @@ import './CarDetail.css'; // Import the CSS file
  * Displays detailed information about a specific car.
  * Provides options to edit or delete the car.
  */
-const API_URL = 'https://car-backend-4py7.onrender.com';
+const API_URL = 'https://car-backend-4py7.onrender.com/api';
 const CarDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ const CarDetail = () => {
           {car.images.map((image, index) => (
             <img
               key={index}
-              src={`http://localhost:5000/uploads/${image}`}
+              src={`https://car-backend-4py7.onrender.com/uploads/${image}`}
               alt={`Car ${index}`}
               className="car-detail-image"
             />
