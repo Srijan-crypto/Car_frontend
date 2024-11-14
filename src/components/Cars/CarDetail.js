@@ -10,7 +10,7 @@ import './CarDetail.css'; // Import the CSS file
  * Displays detailed information about a specific car.
  * Provides options to edit or delete the car.
  */
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://car-backend-4py7.onrender.com';
 const CarDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
